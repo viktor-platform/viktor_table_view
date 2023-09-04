@@ -1,0 +1,53 @@
+[project]
+name = "viktor_table_view"
+version = "0.1.0"
+description = "Table view for VIKTOR applications"
+readme = "README.md"
+requires-python = ">=3.7"
+license = {file = "LICENSE"}
+authors = [
+    {name = "S.J. van der Meer", email = "svandermeer@viktor.ai" }
+]
+maintainers = [
+    {name = "S.J. van der Meer", email = "svandermeer@viktor.ai" }
+]
+dependencies = [
+    "viktor",
+    "pandas",
+    "Jinja2",
+]
+
+[project.optional-dependencies]
+dev = [
+    "black",
+    "isort",
+    "pylint",
+]
+[project.urls]
+"Homepage" = "https://github.com/viktor-platform/viktor_table_view"
+"Bug Reports" = "https://github.com/viktor-platform/viktor_table_view/issues"
+
+[tool.setuptools]
+packages = ["viktor_table_view"]
+package-data = {"viktor_table_view" = ["*.jinja"]}
+
+[build-system]
+requires = ["setuptools>=43.0.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[tool.black]
+line-length = 120
+
+[tool.isort]
+profile = 'black'
+line_length = 120
+force_single_line = true
+skip_glob = [".env"]
+
+[tool.pylint.'MASTER']
+max-line-length=120
+
+[tool.pylint.'MESSAGES CONTROL']
+disable=[
+    'no-name-in-module',  # Suppresses E0611: No name 'XXX' in module 'viktor.YYY'
+]
