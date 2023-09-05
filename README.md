@@ -52,7 +52,7 @@ class SampleEntity(ViktorController):
 Improvements to the view are very welcome. Please ensure your improvements adhere to the code standards by running 
 black, isort and pylint (with the versions specified in `dev-requirements.txt`):
 ```shell
-python -m black src/;
-python -m isort src/;
-python -m pylint src/ --rcfile=pyproject.toml;
+python -m black viktor_table_view/;
+python -m isort viktor_table_view/;
+python -m pylint viktor_table_view/ --rcfile=pyproject.toml;
 ```
