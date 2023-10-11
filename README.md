@@ -7,7 +7,7 @@ This repository can be installed in a VIKTOR application to show nicely formatte
 Paste the link of this repository in your `requirements.txt`:
 ```text
 viktor==14.4.0
-git+https://github.com/viktor-platform/viktor_table_view.git
+viktor-table-view
 ```
 
 # Example implementation
