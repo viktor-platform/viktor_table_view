@@ -15,10 +15,17 @@ None.
 None.
 
 ### Fixed
-- (#3) Set charset to UTF-8 on output table HTML
+None.
 
 ### Security
 None.
+
+### Internal
+None.
+
+## v0.1.1 (11/10/2023)
+### Fixed
+- (#3) Set charset to UTF-8 on output table HTML
 
 ### Internal
 - (#2) Fix TypeError on Python 3.7 - Contributed by @wang606
