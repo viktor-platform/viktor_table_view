@@ -4,6 +4,8 @@ respectively
 from pathlib import Path
 from typing import Optional
 from typing import Union
+from typing import Dict
+from typing import Tuple
 
 import pandas as pd
 from pandas.io.formats.style import Styler
@@ -34,7 +36,7 @@ class TableResult(WebResult):
     def __init__(
         self,
         dataframe: pd.DataFrame,
-        n_decimals: Optional[Union[int, dict[Union[str, tuple[str, ...]], int]]] = None,
+        n_decimals: Optional[Union[int, Dict[Union[str, Tuple[str, ...]], int]]] = None,
         dataframe_colours: Optional[pd.DataFrame] = None,
         style: Optional[Styler] = None,
     ):
