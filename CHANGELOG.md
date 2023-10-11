@@ -21,7 +21,7 @@ None.
 None.
 
 ### Internal
-None.
+- (#2) Fix TypeError on Python 3.7 - Contributed by @wang606
 
 ## v0.1.0 (04/09/2023)
 ### Added

@@ -2,10 +2,10 @@
 respectively
 """
 from pathlib import Path
-from typing import Optional
-from typing import Union
 from typing import Dict
+from typing import Optional
 from typing import Tuple
+from typing import Union
 
 import pandas as pd
 from pandas.io.formats.style import Styler
