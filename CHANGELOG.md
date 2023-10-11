@@ -15,7 +15,7 @@ None.
 None.
 
 ### Fixed
-None.
+- (#3) Set charset to UTF-8 on output table HTML
 
 ### Security
 None.
