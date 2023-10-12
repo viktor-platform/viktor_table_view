@@ -81,15 +81,12 @@ class TableResult(WebResult):
 
     def update_header_style(self):
         """Updates header style if no header style is added to the styler"""
-        has_header_style = False
         if self.style.table_styles:
             for table_style in self.style.table_styles:
                 if "th" in table_style.values():
-                    has_header_style = True
-                    break
-        if not has_header_style or self.style.table_styles is None:
-            header_style = {
-                "selector": "th",
-                "props": [("text-align", "center"), ("background-color", "rgba(245, 245, 252)")],
-            }
-            self.style.set_table_styles([header_style])
+                    return
+        header_style = {
+            "selector": "th",
+            "props": [("text-align", "center"), ("background-color", "rgba(245, 245, 252)")],
+        }
+        self.style.set_table_styles([header_style])
