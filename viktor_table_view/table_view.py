@@ -68,11 +68,6 @@ class TableResult(WebResult):
     def get_html(self) -> File:
         """Get the html to be displayed"""
         self.format_dataframe()
-        header_style = {
-            "selector": "th",
-            "props": [("text-align", "center"), ("background-color", "rgba(245, 245, 252)")],
-        }
-        self.style.set_table_styles([header_style])
         with open(Path(__file__).parent / "table.html.jinja", "rb") as template:
             result = render_jinja_template(
                 template, {"table_html": self.style.to_html(table_attributes='class="table table-hover"')}
