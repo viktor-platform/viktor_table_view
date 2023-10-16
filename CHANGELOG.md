@@ -15,13 +15,17 @@ None.
 None.
 
 ### Fixed
-None.
+- (#6) Only update header styler if no header style is passed to `style` argument
 
 ### Security
 None.
 
 ### Internal
 None.
+
+## v0.1.2 (16/10/2023)
+### Fixed
+- (#6) Only update header styler if no header style is passed to `style` argument
 
 ## v0.1.1 (11/10/2023)
 ### Fixed
