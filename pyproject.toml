@@ -1,6 +1,6 @@
 [project]
 name = "viktor_table_view"
-version = "0.1.1"
+version = "0.1.2"
 description = "Table view for VIKTOR applications"
 readme = "README.md"
 requires-python = ">=3.7"
@@ -13,7 +13,7 @@ maintainers = [
 ]
 dependencies = [
     "viktor",
-    "pandas",
+    "pandas < 2.0.0",
     "Jinja2",
 ]
 
