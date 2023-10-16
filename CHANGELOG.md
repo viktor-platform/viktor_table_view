@@ -15,7 +15,7 @@ None.
 None.
 
 ### Fixed
-- (#6) Only update header styler if no header style is passed to `style` argument
+None.
 
 ### Security
 None.
