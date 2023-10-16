@@ -42,6 +42,7 @@ class TableResult(WebResult):
     ):
         self.dataframe = dataframe.copy(deep=True)
         self.style = style or self.dataframe.style
+        self.update_header_style()
         self.dataframe_colours = dataframe_colours
         self.n_decimals = n_decimals
         super().__init__(html=self.get_html())
@@ -67,13 +68,20 @@ class TableResult(WebResult):
     def get_html(self) -> File:
         """Get the html to be displayed"""
         self.format_dataframe()
-        header_style = {
-            "selector": "th",
-            "props": [("text-align", "center"), ("background-color", "rgba(245, 245, 252)")],
-        }
-        self.style.set_table_styles([header_style])
         with open(Path(__file__).parent / "table.html.jinja", "rb") as template:
             result = render_jinja_template(
                 template, {"table_html": self.style.to_html(table_attributes='class="table table-hover"')}
             )
         return result
+
+    def update_header_style(self):
+        """Updates header style if no header style is added to the styler"""
+        if self.style.table_styles:
+            for table_style in self.style.table_styles:
+                if "th" in table_style.values():
+                    return
+        header_style = {
+            "selector": "th",
+            "props": [("text-align", "center"), ("background-color", "rgba(245, 245, 252)")],
+        }
+        self.style.set_table_styles([header_style])
